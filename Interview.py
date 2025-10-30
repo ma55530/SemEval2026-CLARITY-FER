@@ -9,7 +9,7 @@ class Interview:
         self.interviews = interviews
 
     def getQuestionAnswer(self):
-        return [row["interview_question"] + row["interview_answer"] for row in self.interviews]
+        return [f"{row['interview_question']} {row['interview_answer']}" for row in self.interviews]
 
     def getClarity(self):
         return [row["clarity_label"] for row in self.interviews]
