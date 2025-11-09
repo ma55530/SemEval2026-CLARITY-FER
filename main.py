@@ -14,7 +14,7 @@ dataset = load_dataset("ailsntua/QEvasion")
 trainingData = dataset["train"]
 testingData = dataset["test"]
 
-df = pd.DataFrame(columns=["model","f1 score","CLEAR_REPLY","AMBIVALENT","CLEAR_NON_REPLY"])
+df = pd.DataFrame(columns=["model","f1 score","CLEAR_REPLY correct","AMBIVALENT correct","CLEAR_NON_REPLY correct"])
 
 trainingInterviews = Interview(trainingData)
 testingInterviews = Interview(testingData)
