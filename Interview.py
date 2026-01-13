@@ -13,3 +13,9 @@ class Interview:
 
     def getClarity(self):
         return [row["clarity_label"] for row in self.interviews]
+
+    def getEvasion(self):
+        return [row['evasion_label'] for row in self.interviews]
+
+    def getAnnotators(self):
+        return [(row.get('annotator1'), row.get('annotator2'), row.get('annotator3')) for row in self.interviews]
